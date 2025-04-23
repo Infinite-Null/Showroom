@@ -1,6 +1,7 @@
 import Heading from "../../Heading";
 import EachCard from "./EachCard";
 
+
 export default function OurShowrooms() {
   const showRooms = [
     {

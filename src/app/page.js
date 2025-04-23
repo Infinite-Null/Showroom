@@ -1,5 +1,8 @@
-import Carousel from "@/components/global/Home/Carousel";
-import OurShowrooms from "@/components/global/Home/OurShowrooms";
+
+import Carousel from "@/components/global/home/Carousel";
+import GetInTouch from "@/components/global/home/GetInTouch";
+import OurShowrooms from "@/components/global/home/OurShowrooms";
+import OurVehicles from "@/components/global/home/OurVehicles";
 import NavBar from "@/components/global/NavBar";
 
 export default function Home() {
@@ -10,6 +13,8 @@ export default function Home() {
     <main>
       <Carousel/>
       <OurShowrooms/>
+      <OurVehicles/>
+      <GetInTouch/>
     </main> 
    </>
   );
