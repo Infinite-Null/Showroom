@@ -108,7 +108,7 @@ export default function Carousel({ autoplaySpeed = 3500, showDots = true, showAr
   }
   
   return (
-    <div 
+    <section 
       className="relative overflow-hidden w-full" 
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -160,19 +160,19 @@ export default function Carousel({ autoplaySpeed = 3500, showDots = true, showAr
       
       {/* Dot indicators */}
       {showDots && images.length > 1 && (
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center items-center gap-4 z-10">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-orange-500" : "bg-white bg-opacity-50"
-              }`}
+              className={` rounded-full transition-all duration-300 ${
+                index === currentIndex ? "bg-orange-700 w-6 h-6" : "bg-white bg-opacity-50 w-4 h-4"
+              } `}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 }

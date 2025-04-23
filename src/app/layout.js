@@ -9,6 +9,10 @@ export const notoSans = Noto_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>My Showroom</title>
+        <meta name="description" content="Showroom website" />
+      </head>
       <body
         className={`${notoSans.variable} antialiased border-box`}
       >

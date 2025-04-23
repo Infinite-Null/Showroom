@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -61,14 +62,19 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="flex items-center justify-between md:justify-center align-middle px-5 py-3 bg-white">
-        <Link href="/">
-          <h2 className="text-2xl font-bold">Logo</h2>
+      <nav className="flex sticky top-0 z-50 items-center justify-between md:justify-center align-middle px-5 py-5 bg-[rgba(255,255,255,0.8)] backdrop-blur-sm shadow-md">
+        <Link href="/" onClick={() => setIsOpen(false)}>
+          <Image
+            src={"https://cdn4.singleinterface.com/files/outlet/logo/132996/Tvs_logo_png.png"}
+            alt="Logo"
+            width={100}
+            height={100}
+          />
         </Link>
         <ul className="hidden gap-10 w-full justify-center md:flex">
           {links.map((link, index) => (
             <li key={index}>
-              <Link className="hover:text-orange-500 transition-colors text-md" href={link.href}>{link.name}</Link>
+              <Link className="hover:text-orange-700 transition-colors text-md" href={link.href}>{link.name}</Link>
             </li>
           ))}
         </ul>
@@ -99,13 +105,13 @@ export default function NavBar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="pt-16 pb-6 px-6">
-          <ul className="flex flex-col space-y-6 text-lg">
+        <div className="pt-22 pb-6 px-6">
+          <ul className="flex flex-col space-y-2 text-lg">
             {links.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.href}
-                  className="block py-2 hover:text-orange-500 text-md transition-colors"
+                  className="block py-2 hover:text-orange-700 text-md transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
