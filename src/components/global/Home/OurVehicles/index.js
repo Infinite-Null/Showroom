@@ -4,6 +4,8 @@ import Heading from "../../Heading";
 import Tab from "./Tabs/Tab";
 import Vehicles from "./Vehicles/Vehicles";
 
+
+
 export default function OurVehicles() {
   const tabs = [
     { name: "SCOOTER" },

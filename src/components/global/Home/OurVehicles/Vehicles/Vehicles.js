@@ -62,7 +62,16 @@ export default function Vehicles({ vechicles }) {
       )}
 
       {vechicles.map((vehicle, i) => (
-        <EachVehicles key={i} isActive={index === i} vechicle={vehicle} />
+        <EachVehicles
+          key={
+            i +
+            vehicle.name.split("").reduce((a, b) => {
+              return a + b.charCodeAt(0);
+            }, 0)
+          }
+          isActive={index === i}
+          vechicle={vehicle}
+        />
       ))}
     </div>
   );
