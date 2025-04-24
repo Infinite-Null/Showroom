@@ -1,6 +1,7 @@
 
 import Aboutus from "@/components/global/Home/AboutUs";
 import Carousel from "@/components/global/Home/Carousel";
+import Footer from "@/components/global/Home/Footer";
 import GetInTouch from "@/components/global/Home/GetInTouch";
 import OurShowrooms from "@/components/global/Home/OurShowrooms";
 import OurVehicles from "@/components/global/Home/OurVehicles";
@@ -18,6 +19,7 @@ export default function Home() {
       <OurVehicles/>
       <GetInTouch/>
       <Aboutus/>
+      <Footer/>
     </main> 
    </>
   );
