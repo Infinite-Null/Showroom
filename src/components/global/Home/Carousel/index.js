@@ -120,7 +120,7 @@ export default function Carousel({ autoplaySpeed = 3500, showDots = true, showAr
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0 h-full relative">
+          <button key={index} className="w-full flex-shrink-0 h-full relative cursor-pointer">
             <Image
               src={image.src}
               alt={image.alt || `Slide ${index + 1}`}
@@ -129,7 +129,7 @@ export default function Carousel({ autoplaySpeed = 3500, showDots = true, showAr
               className="w-full h-[55vh] md:h-[70vh] object-cover"
               priority={index === 0} 
             />
-          </div>
+          </button>
         ))}
       </div>
       
