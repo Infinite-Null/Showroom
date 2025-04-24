@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-200 lg:grid lg:grid-cols-5">
+    <footer className="bg-gray-100 lg:grid lg:grid-cols-5">
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
         <Image
           src="https://images.pexels.com/photos/5451128/pexels-photo-5451128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
             <p>
-              <span className="text-xs tracking-wide text-gray-500 uppercase">
+              <span className="text-xs tracking-wide text-gray-800 uppercase">
                 {" "}
                 Call us{" "}
               </span>
@@ -30,7 +30,7 @@ export default function Footer() {
               </a>
             </p>
 
-            <ul className="mt-8 space-y-1 text-sm text-gray-700">
+            <ul className="mt-8 space-y-1 text-sm text-gray-800">
               <li>Monday to Friday: 10am - 5pm</li>
               <li>Weekend: 10am - 3pm</li>
             </ul>
@@ -41,7 +41,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-800 transition hover:opacity-75"
                 >
                   <span className="sr-only">Facebook</span>
 
@@ -65,7 +65,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-800 transition hover:opacity-75"
                 >
                   <span className="sr-only">Instagram</span>
 
@@ -89,7 +89,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-800 transition hover:opacity-75"
                 >
                   <span className="sr-only">Twitter</span>
 
@@ -109,7 +109,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-800 transition hover:opacity-75"
                 >
                   <span className="sr-only">GitHub</span>
 
@@ -133,7 +133,7 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-800 transition hover:opacity-75"
                 >
                   <span className="sr-only">Dribbble</span>
 
@@ -162,7 +162,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     1on1 Coaching{" "}
@@ -172,7 +172,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     Company Review{" "}
@@ -182,7 +182,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     Accounts Review{" "}
@@ -192,7 +192,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     HR Consulting{" "}
@@ -202,7 +202,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     SEO Optimisation{" "}
@@ -218,7 +218,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     About{" "}
@@ -228,7 +228,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     Meet the Team{" "}
@@ -238,7 +238,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-700 transition hover:opacity-75"
+                    className="text-gray-800 transition hover:opacity-75"
                   >
                     {" "}
                     Accounts Review{" "}
@@ -255,7 +255,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-gray-500 transition hover:opacity-75"
+                  className="text-gray-700 transition hover:opacity-75"
                 >
                   {" "}
                   Terms & Conditions{" "}
@@ -265,7 +265,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-gray-500 transition hover:opacity-75"
+                  className="text-gray-700 transition hover:opacity-75"
                 >
                   {" "}
                   Privacy Policy{" "}
@@ -275,7 +275,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-gray-500 transition hover:opacity-75"
+                  className="text-gray-700 transition hover:opacity-75"
                 >
                   {" "}
                   Cookies{" "}
@@ -283,7 +283,7 @@ export default function Footer() {
               </li>
             </ul>
 
-            <p className="mt-8 text-xs text-gray-500 sm:mt-0">
+            <p className="mt-8 text-xs text-gray-700 sm:mt-0">
               &copy; 2022. Company Name. All rights reserved.
             </p>
           </div>
