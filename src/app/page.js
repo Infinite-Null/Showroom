@@ -1,4 +1,5 @@
 
+import Aboutus from "@/components/global/home/AboutUs";
 import Carousel from "@/components/global/home/Carousel";
 import GetInTouch from "@/components/global/home/GetInTouch";
 import OurShowrooms from "@/components/global/home/OurShowrooms";
@@ -16,6 +17,7 @@ export default function Home() {
       <OurShowrooms/>
       <OurVehicles/>
       <GetInTouch/>
+      <Aboutus/>
     </main> 
    </>
   );
