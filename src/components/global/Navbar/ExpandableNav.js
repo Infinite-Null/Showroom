@@ -41,7 +41,7 @@ export default function ExpandableNav({
       <ul
         className={`${
           isExpanded ? "py-2 opacity-100" : "h-0 opacity-0 py-0"
-        } overflow-hidden pl-5 top-full md:absolute relative bg-gray-300 md:w-72 w-full gap-2 flex flex-col rounded-xl transition-all duration-400`}
+        } overflow-hidden pl-5 top-full md:absolute relative bg-gray-200 md:w-72 w-full gap-2 flex flex-col rounded-xl transition-all duration-400 shadow`}
       >
         {link.subLinks.map((subLink, subIndex) => (
           <li key={subIndex}>
