@@ -1,0 +1,17 @@
+.expandable-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.expandable-item ul {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #f0f0f0;
+}
+
+.expandable-item:hover ul {
+  display: flex;
+}

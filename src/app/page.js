@@ -5,7 +5,7 @@ import Footer from "@/components/global/Home/Footer";
 import GetInTouch from "@/components/global/Home/GetInTouch";
 import OurShowrooms from "@/components/global/Home/OurShowrooms";
 import OurVehicles from "@/components/global/Home/OurVehicles";
-import NavBar from "../components/global/NavBar";
+import NavBar from "../components/global/Navbar/NavBar";
 import './animation.css';
 
 export default function Home() {
