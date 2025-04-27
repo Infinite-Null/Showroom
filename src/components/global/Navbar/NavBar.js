@@ -206,7 +206,7 @@ export default function NavBar() {
       )}
 
       {/*BackDrop*/}
-      {currentExpanded !== null && !isOpen && (<div
+      {currentExpanded !== null && isOpen && (<div
         className={`fixed inset-0 backdrop-blur-[1.5px] bg-[rgba(18,18,18,0.44)] z-30 transition-opacity duration-500`}
         role="presentation"
         aria-hidden={true}
