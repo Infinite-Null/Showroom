@@ -7,6 +7,7 @@ import ExpandableNav from "./ExpandableNav";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentExpanded, setCurrentExpanded] = useState(null);
 
   const links = [
     {
@@ -85,7 +86,7 @@ export default function NavBar() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isOpen]);
+  }, [currentExpanded, isOpen]);
 
   // Close drawer on window resize (when screen becomes desktop size)
   useEffect(() => {
@@ -113,16 +114,31 @@ export default function NavBar() {
           />
         </Link>
         <ul className="hidden gap-10 w-full justify-center md:flex">
-          {links.map((link, index) => (
-            <li key={index}>
-              <Link
-                className="hover:text-orange-700 transition-colors text-md"
-                href={link.href}
+          {links.map((link, index) => {
+            return link.isExpanded ? (
+              <ExpandableNav
+                key={index}
+                link={link}
+                current={currentExpanded}
+                setCurrent={setCurrentExpanded}
+                setIsOpen={setIsOpen}
+                index={index}
+              />
+            ) : (
+              <li
+                key={index}
+                className={`relative flex flex-col items-start justify-start`}
               >
-                {link.name}
-              </Link>
-            </li>
-          ))}
+                <Link
+                  href={link.href}
+                  className="block py-2 hover:text-orange-700 text-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex md:hidden z-50">
@@ -160,8 +176,8 @@ export default function NavBar() {
         <div className="pt-22 pb-6 px-6">
           <ul className="flex flex-col space-y-2 text-lg">
             {links.map((link, index) => {
-              return link.isExpanded ? (
-                <ExpandableNav key={index} link={link} setIsOpen={setIsOpen} />
+              return link.isExpanded && link.subLinks.length > 0 ? (
+                <ExpandableNav key={index} link={link} setIsOpen={setIsOpen} current={currentExpanded} setCurrent={setCurrentExpanded} index={index}/>
               ) : (
                 <li
                   key={index}
@@ -188,6 +204,14 @@ export default function NavBar() {
           onClick={() => setIsOpen(false)}
         ></div>
       )}
+
+      {/*BackDrop*/}
+      {currentExpanded !== null && !isOpen && (<div
+        className={`fixed inset-0 backdrop-blur-[1.5px] bg-[rgba(18,18,18,0.44)] z-30 transition-opacity duration-500`}
+        role="presentation"
+        aria-hidden={true}
+        onClick={() => setCurrentExpanded(null)}
+      ></div>)}
     </>
   );
 }
