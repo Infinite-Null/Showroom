@@ -9,7 +9,6 @@ import NavBar from "../components/global/NavBar";
 import './animation.css';
 
 export default function Home() {
-
   return (
    <>
     <NavBar/>
