@@ -7,6 +7,7 @@ import ExpandableNav from "./ExpandableNav";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [currentExpanded, setCurrentExpanded] = useState(null);
 
   const links = [
@@ -91,6 +92,12 @@ export default function NavBar() {
   // Close drawer on window resize (when screen becomes desktop size)
   useEffect(() => {
     const handleResize = () => {
+      if (window.innerWidth <= 768 ) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+
       if (window.innerWidth >= 768 && isOpen) {
         setIsOpen(false);
       }
@@ -206,7 +213,7 @@ export default function NavBar() {
       )}
 
       {/*BackDrop*/}
-      {currentExpanded !== null && isOpen && (<div
+      {currentExpanded !== null && !isMobile && (<div
         className={`fixed inset-0 backdrop-blur-[1.5px] bg-[rgba(18,18,18,0.44)] z-30 transition-opacity duration-500`}
         role="presentation"
         aria-hidden={true}
