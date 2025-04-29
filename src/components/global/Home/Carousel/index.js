@@ -1,30 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export default function Carousel({ autoplaySpeed = 3500, showDots = true, showArrows = true }) {
-
-  const images = [
-    {
-        src: "https://images.unsplash.com/photo-1622759314978-957d7f59aa1c?q=80&w=3544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt: "Image 1",
-        caption: "Caption for Image 1",
-        width: 1920,
-    },
-    {
-        src: "https://images.unsplash.com/photo-1716392265475-2b118a27df8b?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt: "Image 1",
-        caption: "Caption for Image 1",
-        width: 1920,
-    },
-    {
-        src: "https://images.unsplash.com/photo-1738576377901-bf5175eefec1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt: "Image 1",
-        caption: "Caption for Image 1",
-        width: 1920,
-    }
-  ]  
+export default function Carousel({ autoplaySpeed = 3500, showDots = true, showArrows = true, images }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -120,16 +100,16 @@ export default function Carousel({ autoplaySpeed = 3500, showDots = true, showAr
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <button key={index} className="w-full flex-shrink-0 h-full relative cursor-pointer">
+          <Link href={'product/' + image.linkTo.split('/')[2]} key={index} className="w-full flex-shrink-0 h-full relative cursor-pointer">
             <Image
               src={image.src}
               alt={image.alt || `Slide ${index + 1}`}
-              width={image.width || 1920}
-              height={image.height || 1080}
+              width={1920}
+              height={1080}
               className="w-full h-[55vh] md:h-[70vh] object-cover"
               priority={index === 0} 
             />
-          </button>
+          </Link>
         ))}
       </div>
       
@@ -165,7 +145,7 @@ export default function Carousel({ autoplaySpeed = 3500, showDots = true, showAr
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={` rounded-full transition-all duration-300 ${
+              className={` rounded-full cursor-pointer transition-all duration-300 ${
                 index === currentIndex ? "bg-orange-700 w-6 h-6" : "bg-white bg-opacity-50 w-4 h-4"
               } `}
               aria-label={`Go to slide ${index + 1}`}
