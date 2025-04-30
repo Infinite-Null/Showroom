@@ -1,14 +1,13 @@
-
-import Aboutus from "@/components/global/Home/AboutUs";
-import Carousel from "@/components/global/Home/Carousel";
-import Footer from "@/components/global/Home/Footer";
-import GetInTouch from "@/components/global/Home/GetInTouch";
-import OurShowrooms from "@/components/global/Home/OurShowrooms";
-import OurVehicles from "@/components/global/Home/OurVehicles";
 import { API_URL } from "@/constants/backend";
 import axios from "axios";
 import NavBar from "../components/global/Navbar/NavBar";
 import './animation.css';
+import Carousel from "@/components/Home/Carousel";
+import OurShowrooms from "@/components/Home/OurShowrooms";
+import OurVehicles from "@/components/Home/OurVehicles";
+import GetInTouch from "@/components/Home/GetInTouch";
+import Aboutus from "@/components/Home/AboutUs";
+import Footer from "@/components/Home/Footer";
 
 export default async function Home() {
   let images = []

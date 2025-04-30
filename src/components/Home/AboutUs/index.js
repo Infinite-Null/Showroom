@@ -1,5 +1,6 @@
+import Heading from "@/components/global/Heading";
 import Image from "next/image";
-import Heading from "../../Heading";
+
 
 export default function Aboutus() {
   return (

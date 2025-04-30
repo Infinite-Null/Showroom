@@ -1,4 +1,5 @@
-import Heading from "../../Heading";
+
+import Heading from "@/components/global/Heading";
 import EachCard from "./EachCard";
 
 

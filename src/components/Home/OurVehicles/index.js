@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Heading from "../../Heading";
 import Tab from "./Tabs/Tab";
 import Vehicles from "./Vehicles/Vehicles";
+import Heading from "@/components/global/Heading";
 
 
 
